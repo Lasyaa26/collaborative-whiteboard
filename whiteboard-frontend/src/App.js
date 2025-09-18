@@ -4,7 +4,7 @@ import io from "socket.io-client";
 import { ChromePicker } from "react-color";
 import "./App.css";
 
-const socket = io("http://localhost:5000");
+const socket = io("https://collaborative-whiteboard-9iid.onrender.com");
 
 function App() {
   const canvasRef = useRef(null);
