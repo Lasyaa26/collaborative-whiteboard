@@ -11,7 +11,7 @@ const server = http.createServer(app);
 // Attach Socket.io
 const io = new Server(server, {
   cors: {
-    origin: "*", // allow all origins for testing, adjust in production
+    origin: "*", // allow all origins for testing
   },
 });
 
@@ -35,8 +35,8 @@ io.on("connection", (socket) => {
   });
 });
 
-// Use deployment-safe port
-const PORT = process.env.PORT || 5000;
+// Start server
+const PORT = 5000;
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
